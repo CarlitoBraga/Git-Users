@@ -1,38 +1,135 @@
-.App {
-  text-align: center;
+:root{
+   --shadow: 0 2px 23px 0 rgba(0 ,0 ,0 ,0.1),
+             0 2px 23px 0 rgba(0, 0, 0, 0.06);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app{
+   height: 100vh;
+   margin:0px;
+   display: grid;
+   grid-template-columns: 400px 1fr;
+   grid-template-rows: 
+    200px
+    1fr
+   ;
+   grid-template-areas: 
+    "App-header search"
+    "personal-info repos"
+    "personal-info  repos"
+   ;
+   grid-gap: 2px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App-header{
+   grid-area: App-header;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   
+}
+.App-header img{
+   width: 100%;
+}
+.search{
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   grid-area: search;
+   padding: 40px;
+   
+}
+.search input{
+   border-radius: 10px;
+   height: 30px;
+   width: 300px;
+}
+.search button{
+   border-radius: 10px;
+   height: 30px;
+   width: 50px;
+   
+}
+.search button:hover{
+   background: black;
+   color:white;
+   cursor: pointer;
+   
+}
+.personal-info{
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   box-shadow: var(--shadow);
+   grid-area: personal-info;
+   padding: 40px;  
+   overflow: auto;
+}
+.personal-info img{
+   border-radius: 200px;
+   width: 250px;
+   height: 250px;
+}
+.personal-info p{
+   margin: 10px;
+   font-size: 16px;
+}
+.repos{
+   grid-area: repos;
+   display: flex;
+   flex-direction: column; 
+   align-items: center;
+   box-shadow: var(--shadow);
+   padding: 40px;
+   overflow:auto;
+}
+.repos ul {
+   width: 100%;
+   padding: 20px;
+   margin: 10px;
+   text-decoration: none;
+}
+.repos ul li{
+   width: 100%;
+   padding: 20px;
+   margin: 5px;
+   text-decoration: none;
+   
+
+}
+.repos a{
+   font-size: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media (max-width:900px){
+   .app{
+      height: auto;
+      margin:0px;
+      display: grid;
+      grid-template-columns:  100%;
+      grid-template-rows: 
+       200px
+       100px
+       auto
+       1fr
+      ;
+      grid-template-areas: 
+       "App-header "
+       "search"
+       "personal-info "
+       "repos"
+      ;
+      grid-gap: 2px;
+   }
+   img{
+    height: 300px;
+   }
+   .search{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      grid-area: search;
+      padding: 40px;
+      
+   }
 }
