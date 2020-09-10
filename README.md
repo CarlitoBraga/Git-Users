@@ -1,6 +1,12 @@
 
-##Demo
+## Um sistema feito para demonstrar o consumo de API com o ReactJS
+
+Basta digitar corretamente o usuário do GITHUB!!
+
 ![Demo](https://github.com/CarlitoBraga/Git-Users/blob/master/Capturar.git.PNG)
+
+
+
 
 ## Available Scripts
 
