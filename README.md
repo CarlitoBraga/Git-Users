@@ -1,5 +1,5 @@
 
-## Um sistema feito para demonstrar o consumo de API com o ReactJS
+## Um sistema feito para demonstrar o consumo de API com o ReactJS <3
 
 Basta digitar corretamente o usuário do GITHUB!!
 
